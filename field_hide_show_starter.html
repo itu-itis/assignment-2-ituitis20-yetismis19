@@ -1,0 +1,38 @@
+<html>
+<head>
+  <style>
+
+    div {
+      display: none;
+    }
+
+    input.birinci:checked ~ div.birinci {
+      display: block;
+    }
+
+    input.ikinci:checked ~ div.ikinci {
+      display: block;
+    }
+
+</style>
+</head>
+<body>
+
+  <form>
+    <fieldset>
+	  <legend>Bir hedef belirle</legend>
+      <label for="bir">birinci hedef</label>
+	  <input id="bir" class="birinci" name="chooseSubmit" type="radio" value="bir" />
+      <label for="iki">ikinci hedef</label>
+      <input id="iki" class="ikinci" name="chooseSubmit" type="radio" value="iki" />
+	  <div class="birinci">
+	    <input type="submit" formaction="http://birinci.hedef" value="birinci hedefe git" />
+	  </div>
+	  <div class="ikinci">
+ 	    <input type="submit" formaction="http://ikinci.hedef" value="ikinci hedefe git" />
+	  </div>
+	</fieldset>
+  </form>
+
+</body>
+</html>
