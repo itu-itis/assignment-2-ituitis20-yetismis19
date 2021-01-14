@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+
 <style>
     body{
-        margin:0;
-
+        margin: 0;
         text-align: center;
         background:rgba(112, 190, 211, 0.267);
         font-family: 'Times New Roman', Times, serif;
@@ -46,6 +45,7 @@
         font-family: poppins;
         font-size: 16px;
         text-transform: uppercase;
+    
     }
     .nav-bar li a:hover  
      {
@@ -116,13 +116,26 @@
 
 }
 
+#check1 #names {
+  border:1px solid ;
+  
+  text-align:left;
+}
 
+#check1 #names tr td  ,#names tr th {
+  padding:1em;
+}
 
-
-
-
+input.birinci:checked ~  div.birinci {
+      display: block;
+    }
+    input.ikinci:checked ~ div.ikinci {
+      display: block;
+    }
 </style>
-    
+
+
+</head>
 <body>
     <div class="container">
         <ul class="nav-bar">
@@ -155,8 +168,57 @@
                 
                 <div class="outer-log">
                     <img src="g1394.png" alt="logo"> 
-                
                 </div>
+                
+                <div class="hey" style="padding-top: 20% ;display: block;">
+                    <label for="bir">Clear</label>
+                    <input id="bir11" class="birinci11" name="chooseSubmit" type="radio" value="bir" />
+                    <label for="bir">Add Teacher</label>
+                    <input id="bir" class="birinci" name="chooseSubmit" type="radio" value="bir" />
+                    <label for="iki">Add Team</label>
+                    <input id="iki" class="ikinci" name="chooseSubmit" type="radio" value="iki" />
+                    <div class="birinci">
+                        <input type="text" id="Subjects" placeholder="Enter Subjects">
+                        <input type="text" id="name" placeholder="Enter Name">
+                        <select id="clusters" name="clusters">
+                            <option value="SAY">SAY</option>
+                            <option value="SOZ">SOZ</option>
+                            <option value="DIL">DIL</option>
+                            <option value="EA">EA</option>
+                        </select>
+                        <button id="addTeacher">Add </button>
+                    </div>
+                    <div class="ikinci">
+                        
+                        <input type="text" id="teamName" placeholder="Team Name">
+                        <select id="Sportfields" name="clusters">
+                            <option value="SAY">Football</option>
+                            <option value="SOZ">Basketball</option>
+                            <option value="DIL">HandBall</option>
+                            <option value="EA">Volleyball</option>
+                        </select>
+                        <button id="addTeam">Add </button>
+                    </div>
+
+                   
+                        <table id="teacherTable">
+                            <tr>
+                                <th>Teacher Name</th>
+                                <th>Subject</th>
+                                <th>Cluster</th>
+                            </tr>
+                    
+                            </table>
+                            <table id="SportsTable">
+                                <tr>
+                                    <th>Sports Type</th>
+                                    <th>Team Name</th>
+                                    
+                                </tr>
+                        
+                                </table>
+                </div>
+                
             </div>
             <div id="check2">
                 <div class="outer-log">
@@ -203,7 +265,6 @@
                         The   language levels by classes.
                         </p>
             </div>
-
             <div id="check3">
                 <div class="outer-log">
                     <img src="g1394.png" alt="logo"> 
@@ -230,13 +291,14 @@
                     <h6>Real Photo</h6>
                 </div>
                 <div class="image" style="display:inline-block;">
-        
+                   
                     <img src="design.jpg" alt="designed one">
                     <h6>Designed Photo</h6>
                 </div>
             </div>
                 <p >&copy; yetismis19<p>
             </div>
+            <script src="script.js"></script>
 
     </div>
 </body>
