@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body{
+        margin: 0;
+        text-align: center;
+        background:rgba(112, 190, 211, 0.267);
+        font-family: 'Times New Roman', Times, serif;
+    }
+    div{
+        display: none;
+    }
+    .container,.banner,.outer-log{
+        display: block;
+    }
+   
+
+  
+     body .nav-bar 
+    {
+        border: 5px ;
+        height: 23px;
+	    background-color:#333;
+	    border-radius: 10px;
+	    float: left;
+	    list-style: none;
+        padding-left: 0;
+        margin-left: 30%;
+        padding-top: 5px;
+    }
+    body .nav-bar li 
+    {
+        display: inline-block;
+    }   
+    body .nav-bar li a
+     {
+        color:white;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-family: poppins;
+        font-size: 16px;
+        text-transform: uppercase;
+    
+    }
+    .nav-bar li a:hover  
+     {
+        background: #fff;
+        border-radius: 8px;
+        color: #333;
+    }
+    div:target {
+  
+    display: block;
+    }
+
+   
+
+  
+    #check2 table, th, td {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: 1px solid black;
+        
+    }
+    #check2 table td:hover{
+        background: #fff;
+        color: #333;
+
+    } 
+ 
+    #check3 img{
+
+        border-radius: 20px;
+    }
+    .outer-log img{
+	 width: 110px; height: 90px;
+	 border: 8px #333 solid;
+     border-radius: 20px;
+     margin-left: 5%;
+     margin-top: 0;
+     float: right;
+
+    }
+
+    
+#check{
+    background-image: url("11.jpg");
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:right center;
+                   
+            
+            
+         }
+
+#check .banner {
+	
+    width: 60vh;
+    height: 18vh;
+    float: left;
+    margin-left: 32%;
+    border: 5px ;
+    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.685);
+    text-align: center; /*text part*/
+    margin-top: 22%;
+
+
+}
+
+#check1 #names {
+  border:1px solid ;
+  
+  text-align:left;
+}
+
+#check1 #names tr td  ,#names tr th {
+  padding:1em;
+}
+
+    input.birinci:checked ~  div.birinci {
+      display: block;
+    }
+    input.ikinci:checked ~ div.ikinci {
+      display: block;
+    }
+
+#teacherTable,#SportsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#teacherTable td, #teacherTable th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#SportsTable td,#SportsTable th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#teacherTable tr{
+
+    background-color: rgba(211, 211, 211, 0.336);
+
+}
+
+#SportsTable tr
+{
+    background-color: rgba(187, 181, 173, 0.397);
+
+}
+#SportsTable tr:hover {background-color: #ddd;}
+#teacherTable tr:hover {background-color: #ddd;}
+
+#teacherTable th ,#SportsTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e49504;
+  color: white;
+}
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <ul class="nav-bar">
+            <li ><a href="#check">Home</a></li>
+            <li><a href="#check1">Sports</a></li>
+            <li><a href="#check2">English Class</a></li>
+            <li><a href="#check3">About Us</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+        
+    </div>
+     
+         
+            <div id="check">
+
+                <div class="outer-log">
+                    <img src="g1394.png" alt="logo"> 
+                
+                </div>
+                <div class="banner" style="display: block;">
+                    
+                    <h1 style="padding: 2%;color:rgba(216, 216, 216, 0.911);">
+                        Turkish Naval High School
+                        (Project)
+                    </h1>
+                 </div>
+                 
+            </div>
+            <div id="check1">
+                
+                <div class="outer-log">
+                    <img src="g1394.png" alt="logo"> 
+                </div>
+                
+                <div class="hey" style="padding-top: 10% ;display: block;">
+                   
+
+                    <h4 style="margin-left: 10%;">
+
+                        <table id="teacherTable" >
+                            <tr>
+                                <th>Teacher Name</th>
+                                <th>Subject</th>
+                                <th>Cluster</th>
+                            </tr>
+                    
+                            </table>
+                        
+                            <table id="SportsTable" style="padding-left: 30%;margin-bottom: 5%;">
+                                <tr>
+                                    <th>Sports Type</th>
+                                    <th>Team Name</th>
+                                    
+                                </tr>
+                        
+                                </table>
+
+                    </h4>
+               
+                        
+                    <input id="bir11" class="birinci11" name="chooseSubmit" type="radio" value="bir" />
+                    <label for="bir">Clear</label>
+                    
+                    <input id="bir" class="birinci" name="chooseSubmit" type="radio" value="bir" />
+                    <label for="bir">Add Teacher</label>
+                    
+                    <input id="iki" class="ikinci" name="chooseSubmit" type="radio" value="iki" />
+                    <label for="iki">Add Team</label>
+                    <div class="birinci">
+                        <input type="text" id="Subjects" placeholder="Enter Subjects">
+                        <input type="text" id="name" placeholder="Enter Name">
+                        <select id="clusters" name="clusters">
+                            <option value="SAY">SAY</option>
+                            <option value="SOZ">SOZ</option>
+                            <option value="DIL">DIL</option>
+                            <option value="EA">EA</option>
+                        </select>
+                        <button id="addTeacher">Add </button>
+                    </div>
+                    <div class="ikinci">
+                        
+                        <input type="text" id="teamName" placeholder="Team Name">
+                        <select id="Sportfields" name="clusters">
+                            <option value="SAY">Football</option>
+                            <option value="SOZ">Basketball</option>
+                            <option value="DIL">HandBall</option>
+                            <option value="EA">Volleyball</option>
+                        </select>
+                        <button id="addTeam">Add </button>
+                    </div>
+
+                        
+                    
+                </div>
+                
+            </div>
+            <div id="check2">
+                <div class="outer-log">
+                    <img src="g1394.png" alt="logo"> 
+                
+                </div>
+                    <h1 style="padding-top: 8%;">
+                        Prep Class Information
+                    </h1>
+                    <p>
+                        In our school english is very important so we have an preperation 
+                        opportunity.There is a proficiency exam if a candidate can pass the
+                        the exami he can begin his educaation life in 9th class.However if he fails
+                        then he have to begin from the prep class.
+                    </p>    
+                        
+                        <table style="width:60%">
+                            <tr>
+                                <th>Year</th> 
+                            <th>Level </th>
+                            </tr>
+                            <tr>
+                                <td>Prep</td>
+                            <td>A2</td>
+                            </tr>
+                            <tr>
+                                <td>9th Class</td>
+                            <td>B1</td>
+                            </tr>
+                            <tr>
+                                <td>10th Class</td>
+                            <td>B2</td>
+                            </tr>
+                            <tr>
+                                <td>11th Class</td>
+                                <td>C1</td>
+                            </tr>
+                            <tr>
+                                <td>12th Class</td>
+                                <td>C2</td>
+                            </tr>
+                        </table>
+                        <p style="padding-bottom: 4%;">
+                        The   language levels by classes.
+                        </p>
+            </div>
+            <div id="check3">
+                <div class="outer-log">
+                    <img src="g1394.png" alt="logo"> 
+                
+                </div>
+                <h1 style="padding-top: 10%;">Vision</h1>
+                <p>To have an effective naval force depending on national power, and to use this force to acquire Turkey’s interest and rights in world seas.</p>
+                <h1>Mission</h1>
+                <p>To protect and watch for the sovereignty, rights and interests of Turkey in surrounding seas.</p>
+                <h1>History</h1>
+                <p>Deniz Lisesi's history extends back to 1773. The Mühendishane-i Bahr-i Hümâyûn (Imperial School of Naval Engineering) was founded as a high school in the Kasımpaşa district of Istanbul, on the northern shore of the Golden Horn, where the shipyards and arsenals of the Ottoman Navy and the headquarters of the Ottoman Naval Ministry (Bahriye Nezareti) were located.</p>
+                <h1>Purpose</h1>
+                <p>For the Turkish Naval Academy, Deniz Lisesi educated naval cadets. Established in 1773, it is one of the oldest high schools in Turkey. Being a military school in nature, entry is only available to students with a special admission exam and a physical examination who are Turkish citizens.</p>    
+                <h1>About Me</h1>
+            <p>
+                I am an irregular computer engineer student at ITU :)
+            </p>
+
+                <div class="outer" style="display: flex; justify-content: space-evenly;">
+        
+                <div class="image" style="display: inline;">
+        
+                    <img src="designR.jpg" alt="real one">
+                    <h6>Real Photo</h6>
+                </div>
+                <div class="image" style="display:inline-block;">
+                   
+                    <img src="design.jpg" alt="designed one">
+                    <h6>Designed Photo</h6>
+                </div>
+            </div>
+                <p >&copy; yetismis19<p>
+            </div>
+            <script src="script.js"></script>
+
+  
+</body>
+</html>
