@@ -12,15 +12,22 @@ let tableSport = document.querySelector('#SportsTable');
 //table variables
 let teamNameInput = document.querySelector('#teamName');
 let fieldInput = document.querySelector('#Sportfields');
- 
- 
+
+//for teacher for-sports
+let btnDis1 = document.querySelector('#for-teacher');
+let  bir= document.querySelector('#birinci');
+let  iki= document.querySelector('#ikinci');
+//for team
+let btnDis2 = document.querySelector('#for-sports'); 
+
 btnAdd.addEventListener('click', () => {
     let name = nameInput.value;
     let subject = subjectInput.value;
    
     let cluster = clusterInput.options[clusterInput.selectedIndex].text;
- 
-    let template = `
+    if(name!='' && subject!=''){
+
+        let template = `
                 <tr>
                     <td>${name}</td>
                     <td>${subject}</td>
@@ -30,6 +37,9 @@ btnAdd.addEventListener('click', () => {
     table.innerHTML += template;
     nameInput.value=null;
     subjectInput.value=null;
+
+    }
+    
     
 
 });
@@ -38,19 +48,41 @@ btnAdd.addEventListener('click', () => {
 btnAddSport.addEventListener('click', () => {
     let teamName = teamNameInput.value;
     let type = fieldInput.options[fieldInput.selectedIndex].text;
- 
-    let template = `
-                <tr>
-                    <td>${type}</td>
-                    <td>${teamName}</td>
-            
-                </tr>`;
- 
+
+    if(teamName!=''){
+        let template = `
+        <tr>
+            <td>${type}</td>
+            <td>${teamName}</td>
+    
+        </tr>`;
+
         tableSport.innerHTML += template;
-    teamNameInput.value=null;
+        teamNameInput.value=null;
+
+
+    }
+ 
+   
    
     
 
 });
+
+
+btnDis1.addEventListener('click', () => {
+  
+    bir.style.display="block"
+    iki.style.display="none"
+
+});
+
+btnDis2.addEventListener('click', () => {
+  
+    bir.style.display="none"
+    iki.style.display="block"
+
+});
+
 
 

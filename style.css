@@ -120,12 +120,6 @@ text-align:left;
 padding:1em;
 }
 
-input.birinci:checked ~  div.birinci {
-  display: block;
-}
-input.ikinci:checked ~ div.ikinci {
-  display: block;
-}
 
 #teacherTable,#SportsTable {
 font-family: Arial, Helvetica, sans-serif;
@@ -164,4 +158,26 @@ padding-bottom: 12px;
 text-align: left;
 background-color:#333;
 color: white;
+}
+
+button {
+    background-color:#333;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+#ikinci, #birinci
+{
+    float: right;
+    margin-right: 10%;  
+
+
+
 }
